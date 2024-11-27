@@ -4,6 +4,7 @@ import React from "react";
 const HowToShareYourKahaniSection = () => {
   return (
     <div
+    id="howTo"
       className="w-screen min-h-[200vh] bg-cover  flex items-center flex-col py-20 bg-no-repeat"
       style={{
         background: " linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.0761554621848739) 24%, rgba(255,255,255,0.08175770308123254) 70%, rgba(255,255,255,1) 100%) ,url(/images/Gradient.png)",

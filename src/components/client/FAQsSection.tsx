@@ -17,7 +17,7 @@ const FAQsSection = () => {
       setExpanded(newExpanded ? panel : false);
     };
   return (
-    <div className="w-screen min-h-screen py-10 flex  gap-4 flex-col items-center">
+    <div id="faqs" className="w-screen min-h-screen py-10 flex  gap-4 flex-col items-center">
       <button className="border-4 rounded-[50px] border-black font-semibold text-xs py-2 px-12  uppercase text-black ">
         FAQs
       </button>

@@ -6,11 +6,11 @@ const Header = () => {
     <div className="w-full absolute top-0 left-0 h-[90px] px-10 flex justify-between items-center">
       {/* Left section */}
       <div className="flex gap-2">
-        <a className="px-2 py-2 text-lg text-black" href="#">Intro</a>
-        <a className="px-2 py-2 text-lg text-black" href="#">Riders</a>
-        <a className="px-2 py-2 text-lg text-black" href="#">FAQs</a>
-        <a className="px-2 py-2 text-lg text-black" href="#">How To</a>
-        <a className="px-2 py-2 text-lg text-black" href="#">Social media stories</a>
+        <a className="px-2 py-2 text-lg text-black" href="#intro">Intro</a>
+        <a className="px-2 py-2 text-lg text-black" href="#rider">Riders</a>
+        <a className="px-2 py-2 text-lg text-black" href="#faqs">FAQs</a>
+        <a className="px-2 py-2 text-lg text-black" href="#howTo">How To</a>
+        <a className="px-2 py-2 text-lg text-black" href="#social">Social media stories</a>
       </div>
 
       {/* Centered logo */}

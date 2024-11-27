@@ -19,7 +19,7 @@ const RiderORProduct = () => {
   };
 
   return (
-    <div className="w-screen  py-10">
+    <div id="rider" className="w-screen  py-10">
       <div className="w-full flex items-center py-10 justify-center">
         <Button
           onClick={() => setIsRiderTab(true)}
