@@ -169,12 +169,13 @@ const RiderORProduct = () => {
        <Swiper 
         spaceBetween={40}
         slidesPerView={4}  
+        loop={true}
         className="w-full h-full !px-10 !py-12 !flex !items-center"
        >
         {
           ProductsDataConventional.map((item)=>(
             <SwiperSlide key={item.id}>
-              <div className="p-6 flex flex-col gap-4 rounded-3xl bg-[#002175]">
+              <div className="px-6 py-8  flex flex-col gap-4 rounded-3xl bg-[#002175]">
                 <p className="uppercase text-xl font-semibold text-teal-500">{item.status}</p>
                 <h2 className="text-3xl font-semibold text-wrap text-white">{item.title}</h2>
                 <p className="text-sm font-semibold text-white">{item.description}</p>
@@ -189,6 +190,7 @@ const RiderORProduct = () => {
             <p className="px-8 bg-white text-3xl text-[#002175] z-30">Takaful</p>
           </div>
           <Swiper 
+          loop={true}
         spaceBetween={40}
         slidesPerView={4}  
         className="w-full h-full !px-10 !py-12 !flex !items-center"
@@ -196,7 +198,7 @@ const RiderORProduct = () => {
         {
           ProductsDataConventional.map((item)=>(
             <SwiperSlide key={item.id}>
-              <div className="p-6 flex flex-col gap-4 rounded-3xl bg-[#01311C]">
+              <div className="px-6 py-8 flex flex-col gap-4 rounded-3xl bg-[#01311C]">
                 <p className="uppercase text-xl font-semibold text-teal-500">{item.status}</p>
                 <h2 className="text-3xl font-semibold text-wrap text-white">{item.title}</h2>
                 <p className="text-sm font-semibold text-white">{item.description}</p>
