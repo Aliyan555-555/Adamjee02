@@ -1,4 +1,5 @@
 "use client"
+import { getInstagramFeeds } from '@/src/api'
 // import { fetchSocialMediaPosts } from '@/src/api'
 import CampaignIntro from '@/src/components/client/CampaignIntro'
 import FAQsSection from '@/src/components/client/FAQsSection'
@@ -11,8 +12,10 @@ import React, { useEffect } from 'react'
 const Home = () => {
 
   const fetch  = async() =>{
-    // const res= await fetchSocialMediaPosts("hello");
-    // console.log(res);
+ getInstagramFeeds("vacations").then(feed =>{
+      console.log(feed)
+    }).catch(err =>console.log(err))
+    // console.log(res)
   }
 
   useEffect(()=>{

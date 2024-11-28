@@ -19,6 +19,7 @@
     "@mui/styled-engine-sc": "^6.1.8",
     "axios": "^1.7.8",
     "blobshape": "^1.0.0",
+    "cheerio": "^1.0.0",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
