@@ -3,15 +3,19 @@ import { Button, IconButton } from "@mui/material";
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import blobshape from "blobshape";
-import { ProductsDataConventional, RiderTabsData } from "@/src/constants";
-import { SwiperSlide ,Swiper} from "swiper/react";
+import {
+  ProductsDataConventional,
+  ProductsDataTakeFull,
+  RiderTabsData,
+} from "@/src/constants";
+import { SwiperSlide, Swiper } from "swiper/react";
 
 const RiderORProduct = () => {
   const [index, setIndex] = useState(0);
 
   const [isRiderTab, setIsRiderTab] = useState(true);
   const handlePrevClick = () => {
-    setIndex((prev) => (prev === 0 ? RiderTabsData.length - 1 : prev - 1)); 
+    setIndex((prev) => (prev === 0 ? RiderTabsData.length - 1 : prev - 1));
   };
 
   const handleNextClick = () => {
@@ -33,8 +37,8 @@ const RiderORProduct = () => {
             fontSize: "2rem",
             fontWeight: "bold",
             textTransform: "uppercase",
-            backgroundColor: isRiderTab?"#002175":'#fff',
-            color: isRiderTab?"white":'#002175',
+            backgroundColor: isRiderTab ? "#002175" : "#fff",
+            color: isRiderTab ? "white" : "#002175",
           }}
           className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
         >
@@ -52,10 +56,10 @@ const RiderORProduct = () => {
             fontSize: "2rem",
             fontWeight: "bold",
             textTransform: "uppercase",
-            backgroundColor: isRiderTab?"white":'#002175',
-            color: isRiderTab?"#002175":'#fff',
+            backgroundColor: isRiderTab ? "white" : "#002175",
+            color: isRiderTab ? "#002175" : "#fff",
           }}
-            className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
+          className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
         >
           Products
         </Button>
@@ -73,11 +77,7 @@ const RiderORProduct = () => {
                 </div>
 
                 {/* Display animated blob */}
-                <Blob
-                  image={true}
-                  src={RiderTabsData[index].image}
-                
-                />
+                <Blob image={true} src={RiderTabsData[index].image} />
               </div>
               <div className="w-full md:w-1/2 relative h-full flex text-lg gap-1 max-sm:items-center max-sm:text-center justify-center flex-col">
                 <p>
@@ -162,78 +162,126 @@ const RiderORProduct = () => {
             </div>
           </div>
         </div>
-      ):(
+      ) : (
         <div className="w-full py-10">
-        {/* Conventional Section */}
-        <div className="flex w-full relative items-center justify-center">
-          <div className="w-full absolute h-[2px] z-20 bg-[#002175]" />
-          <p className="px-8 bg-white text-3xl text-[#002175] z-30">Conventional</p>
+          {/* Conventional Section */}
+          <div className="flex w-full relative items-center justify-center">
+            <div className="w-full absolute h-[2px] z-20 bg-[#002175]" />
+            <p className="px-8 bg-white text-3xl text-[#002175] z-30">
+              Conventional
+            </p>
+          </div>
+          <Swiper
+            spaceBetween={40}
+            loop={true}
+            className="w-full h-full !px-10 !py-12 !flex !items-center"
+            breakpoints={{
+              320: {
+                slidesPerView: 1, // 1 product for mobile
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2, // 2 products for tablets
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 4, // 4 products for desktops
+                spaceBetween: 40,
+              },
+            }}
+          >
+            {ProductsDataConventional.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className="px-6 py-14 h-[300px]  relative flex flex-col gap-4 rounded-3xl bg-[#002175]">
+                  <h2 className="text-3xl font-semibold text-wrap text-white">
+                    {item.title}
+                  </h2>
+                  <p className="text-sm font-semibold text-white">
+                    {item.description}
+                  </p>
+                  <a
+                    href={item.href}
+                    download={item.title}
+                    className="py-2 flex text-white right-4 absolute bottom-2 items-center justify-end gap-3"
+                  >
+                    <p>Download the Brochure</p>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Takaful Section */}
+          <div className="flex w-full relative items-center justify-center">
+            <div className="w-full absolute h-[2px] z-20 bg-[#002175]" />
+            <p className="px-8 bg-white text-3xl text-[#002175] z-30">
+              Takaful
+            </p>
+          </div>
+          <Swiper
+            loop={true}
+            spaceBetween={40}
+            className="w-full h-full !px-10 !py-12 !flex !items-center"
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+            }}
+          >
+            {ProductsDataTakeFull.map((item) => (
+              <SwiperSlide key={item.id} className="h-full">
+                <div className="px-6 py-14 h-[300px]  relative flex flex-col gap-4 rounded-3xl bg-[#01311C]">
+                  <h2 className="text-3xl font-semibold text-wrap text-white">
+                    {item.title}
+                  </h2>
+                  <p className="text-sm font-semibold text-white">
+                    {item.description}
+                  </p>
+                  <a
+                    href={item.href}
+                    download={item.title}
+                    className="py-2 flex text-white right-4 absolute bottom-2 items-center justify-end gap-3"
+                  >
+                    <p>Download the Brochure</p>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-        <Swiper
-          spaceBetween={40}
-          loop={true}
-          className="w-full h-full !px-10 !py-12 !flex !items-center"
-          breakpoints={{
-            320: {
-              slidesPerView: 1, // 1 product for mobile
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2, // 2 products for tablets
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 4, // 4 products for desktops
-              spaceBetween: 40,
-            },
-          }}
-        >
-          {ProductsDataConventional.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="px-6 py-8 flex flex-col gap-4 rounded-3xl bg-[#002175]">
-                <p className="uppercase text-xl font-semibold text-teal-500">{item.status}</p>
-                <h2 className="text-3xl font-semibold text-wrap text-white">{item.title}</h2>
-                <p className="text-sm font-semibold text-white">{item.description}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-  
-        {/* Takaful Section */}
-        <div className="flex w-full relative items-center justify-center">
-          <div className="w-full absolute h-[2px] z-20 bg-[#002175]" />
-          <p className="px-8 bg-white text-3xl text-[#002175] z-30">Takaful</p>
-        </div>
-        <Swiper
-          loop={true}
-          spaceBetween={40}
-          className="w-full h-full !px-10 !py-12 !flex !items-center"
-          breakpoints={{
-            320: {
-              slidesPerView: 1, // 1 product for mobile
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2, // 2 products for tablets
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 4, // 4 products for desktops
-              spaceBetween: 40,
-            },
-          }}
-        >
-          {ProductsDataConventional.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="px-6 py-8 flex flex-col gap-4 rounded-3xl bg-[#01311C]">
-                <p className="uppercase text-xl font-semibold text-teal-500">{item.status}</p>
-                <h2 className="text-3xl font-semibold text-wrap text-white">{item.title}</h2>
-                <p className="text-sm font-semibold text-white">{item.description}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
       )}
     </div>
   );
@@ -248,7 +296,7 @@ function getRandomPath() {
   }).path;
 }
 
-function Blob(props:{image:boolean;src:string}) {
+function Blob(props: { image: boolean; src: string }) {
   const [flip, set] = useState(false);
 
   const { path } = useSpring({
@@ -264,13 +312,13 @@ function Blob(props:{image:boolean;src:string}) {
     },
   });
   return (
-    <svg viewBox="0 0 500 500" width="100%" >
-      {!props.image && <animated.path  d={path} />}
+    <svg viewBox="0 0 500 500" width="100%">
+      {!props.image && <animated.path d={path} />}
       {props.image && (
         <>
           <defs>
             <clipPath id="a">
-              <animated.path  d={path} />
+              <animated.path d={path} />
             </clipPath>
           </defs>
           <image
