@@ -192,7 +192,7 @@ const RiderORProduct = () => {
           >
             {ProductsDataConventional.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="px-6 py-14 h-[300px]  relative flex flex-col gap-4 rounded-3xl bg-[#002175]">
+                <div className="px-6 py-14 h-[350px]  relative flex flex-col gap-4 rounded-3xl bg-[#002175]">
                   <h2 className="text-3xl font-semibold text-wrap text-white">
                     {item.title}
                   </h2>
@@ -251,7 +251,7 @@ const RiderORProduct = () => {
           >
             {ProductsDataTakeFull.map((item) => (
               <SwiperSlide key={item.id} className="h-full">
-                <div className="px-6 py-14 h-[300px]  relative flex flex-col gap-4 rounded-3xl bg-[#01311C]">
+                <div className="px-6 py-14 h-[350px]  relative flex flex-col gap-4 rounded-3xl bg-[#01311C]">
                   <h2 className="text-3xl font-semibold text-wrap text-white">
                     {item.title}
                   </h2>
