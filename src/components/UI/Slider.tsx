@@ -61,18 +61,32 @@ const Slider = () => {
   return (
     <div className="w-full py-10 flex justify-center items-center mx-auto">
       <Swiper
-        spaceBetween={0}
-        slidesPerView={selectedCard ? 4 : 6} // Show 6 cards in a row
+        spaceBetween={10}
+        slidesPerView={1} // Default to 1 slide on mobile
         grabCursor={true}
         centeredSlides={true}
         slideToClickedSlide={true}
         loop={true}
         speed={900}
         autoplay={{
-          delay: 1000, // 3 seconds delay between slides
+          delay: 1000, // 1 second delay between slides
           disableOnInteraction: false,
         }}
         initialSlide={3}
+        breakpoints={{
+          640: { // For small screens (mobile)
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: { // For tablets
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1024: { // For larger screens (desktops)
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
         className="w-full h-full !flex !items-center"
       >
         {demoData.map((card) => (
@@ -80,22 +94,28 @@ const Slider = () => {
             key={card.id}
             onMouseEnter={() => handleCardClick(card.id)}
             onClick={() => handleCardClick(card.id)}
-            className={`transition-all duration-500 ease-in-out ${selectedCard === card.id ? "!mr-32" : ""}`}
+            className={`transition-all duration-500 ease-in-out ${
+              selectedCard === card.id ? "!mr-32" : ""
+            }`}
           >
             <div
               className={`bg-[#5984A0] group rounded-[30px] relative transition-all duration-500 ease-in-out ${
-                selectedCard === card.id ? "w-[400px] h-[399px]" : "w-[250px] h-[350px]"
+                selectedCard === card.id
+                  ? "w-[400px] h-[399px]"
+                  : "w-[250px] h-[350px]"
               } p-[1px] border`}
             >
               <div className="w-[60%] flex flex-col justify-between relative h-full">
                 {selectedCard === card.id && (
-                  <React.Fragment>
+                  <>
                     <div className="flex z-50 pt-4 pl-3 flex-col text-[#002175] font-semibold">
                       <p className="text-sm">Video Launch</p>
                       <p className="text-xl">{card.date}</p>
                     </div>
                     <div className="z-50 flex flex-col pb-4 pl-3">
-                      <h1 className="text-6xl font-semibold text-[#002175] text-wrap">{card.name}</h1>
+                      <h1 className="text-6xl font-semibold text-[#002175] text-wrap">
+                        {card.name}
+                      </h1>
                       <h4 className="text-xl font-semibold">{card.occupation}</h4>
                     </div>
 
@@ -113,7 +133,7 @@ const Slider = () => {
                         fillOpacity="0.7"
                       />
                     </svg>
-                  </React.Fragment>
+                  </>
                 )}
               </div>
               <Image
