@@ -3,69 +3,67 @@ export const FAQs = [
   {
     id: 1,
     question: "What is the purpose of the Level Term Rider (LTR)?",
-    answer: "",
+    answer: "The LTR provides financial protection by offering a lump sum payment in the event of death.",
   },
   {
     id: 2,
-    question: "What does the Monthly Income Benefit (MI B) cover?",
-    answer: "",
+    question: "What does the Monthly Income Benefit (MIB) cover?",
+    answer: "The MIB ensures a steady monthly income in case of death or permanent total disability caused by an accident or illness.",
   },
   {
     id: 3,
     question: "How does the Waiver of Premium - Disability (WOP) work?",
-    answer: "",
+    answer: "This rider waives future premium payments if the policyholder becomes permanently and totally disabled due to an accident or sickness.",
   },
   {
     id: 4,
-    question: "What is the Waiver of premium - Death (WOP)?",
-    answer: "",
+    question: "What is the Waiver of Premium - Death (WOP)?",
+    answer: "The WOP rider ensures that the policy premiums are paid on behalf of the insured in case of their death.",
   },
   {
     id: 5,
     question: "What is the Spouse Rider (SR)?",
-    answer: "",
+    answer: "The Spouse Rider provides coverage for the death of the policyholder's spouse, offering financial security to the family.",
   },
   {
     id: 6,
-    question:
-      "What illnesses are covered under the Critical Illness (CI) rider?",
-    answer: "",
+    question: "What illnesses are covered under the Critical Illness (CI) rider?",
+    answer: "The CI rider provides coverage for 12 critical illnesses, ensuring financial support upon diagnosis.",
   },
   {
     id: 7,
     question: "What does the Accidental Death Benefit (ADB) cover?",
-    answer: "",
+    answer: "The ADB offers financial protection to the insured's family in case of death due to an accident.",
   },
   {
     id: 8,
     question: "What is the Accidental Death and Disability Benefit (AD&D)?",
-    answer: "",
+    answer: "This rider provides coverage in case of accidental death or permanent total disability resulting from an accident.",
   },
   {
     id: 9,
-    question:
-      "How does the Hospital Cash Back (HCB) rider benefit policyholders?",
-    answer: "",
+    question: "How does the Hospital Cash Back (HCB) rider benefit policyholders?",
+    answer: "The HCB rider provides daily cash allowances during hospitalization, including enhanced benefits for ICU admissions.",
   },
   {
     id: 10,
     question: "Can multiple riders be added to the same policy?",
-    answer: "",
+    answer: "Yes, multiple riders can be added to enhance the policy coverage, subject to terms and conditions.",
   },
   {
     id: 11,
     question: "Is there a maximum coverage limit for riders?",
-    answer: "",
+    answer: "Yes, the maximum sum assured for certain riders, including ADB and AD&D, is Rs. 10 million.",
   },
   {
     id: 12,
     question: "Do I need a medical check-up to add riders?",
-    answer: "",
+    answer: "A medical check-up is mandatory for the Critical Illness rider. For other riders, it depends on the policy terms.",
   },
   {
     id: 13,
     question: "Can riders be renewed after the benefit term ends?",
-    answer: "",
+    answer: "Yes, certain riders like the Hospital Cash Back (HCB) can be renewed after the initial benefit term.",
   },
 ];
 

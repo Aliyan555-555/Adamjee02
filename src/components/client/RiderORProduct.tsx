@@ -36,6 +36,7 @@ const RiderORProduct = () => {
             backgroundColor: isRiderTab?"#002175":'#fff',
             color: isRiderTab?"white":'#002175',
           }}
+          className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
         >
           Riders
         </Button>
@@ -54,6 +55,7 @@ const RiderORProduct = () => {
             backgroundColor: isRiderTab?"white":'#002175',
             color: isRiderTab?"#002175":'#fff',
           }}
+            className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
         >
           Products
         </Button>
@@ -61,12 +63,12 @@ const RiderORProduct = () => {
       {isRiderTab ? (
         <div className="w-full flex-col flex items-center">
           <div className="w-[90%] flex items-center flex-col">
-            <h2 className="text-6xl text-[#002175] mt-8">
+            <h2 className="text-4xl max-sm:text-center md:text-6xl  text-[#002175] mt-8">
               {RiderTabsData[index].title}
             </h2>
-            <div className="w-full h-[500px] flex">
-              <div className="w-1/2 h-full relative">
-                <div className="w-[200px] backdrop-blur-xl absolute h-[200px] bg-[#ffffff2b] text-[#002175] rounded-full flex items-center justify-center text-center text-8xl font-semibold">
+            <div className="w-full  h-[500px] flex">
+              <div className="w-1/2  hidden md:block h-full relative">
+                <div className="hidden md:flex w-[200px] backdrop-blur-xl absolute h-[200px] bg-[#ffffff2b] text-[#002175] rounded-full  items-center justify-center text-center text-8xl font-semibold">
                   <h1 className="p-0 m-0">0{index + 1}</h1>
                 </div>
 
@@ -77,7 +79,7 @@ const RiderORProduct = () => {
                 
                 />
               </div>
-              <div className="w-1/2 h-full flex text-lg gap-1 justify-center flex-col">
+              <div className="w-full md:w-1/2 relative h-full flex text-lg gap-1 max-sm:items-center max-sm:text-center justify-center flex-col">
                 <p>
                   <strong>Entry Age:</strong> {RiderTabsData[index].EntryAge}
                 </p>
@@ -107,7 +109,7 @@ const RiderORProduct = () => {
                 </p>
 
                 {/* Navigation buttons */}
-                <div className="w-[200px] flex items-center justify-between mt-20 text-xl font-semibold">
+                <div className="w-[200px] absolute bottom-0 flex items-center justify-between mt-20 text-xl font-semibold">
                   <IconButton onClick={handlePrevClick}>
                     <svg
                       width="28"
@@ -162,54 +164,76 @@ const RiderORProduct = () => {
         </div>
       ):(
         <div className="w-full py-10">
-          <div className="flex w-full relative items-center justify-center">
-            <div className="w-full absolute h-[2px] z-20 bg-[#002175]"/>
-            <p className="px-8 bg-white text-3xl text-[#002175] z-30">Conventional</p>
-          </div>
-       <Swiper 
-        spaceBetween={40}
-        slidesPerView={4}  
-        loop={true}
-        className="w-full h-full !px-10 !py-12 !flex !items-center"
-       >
-        {
-          ProductsDataConventional.map((item)=>(
+        {/* Conventional Section */}
+        <div className="flex w-full relative items-center justify-center">
+          <div className="w-full absolute h-[2px] z-20 bg-[#002175]" />
+          <p className="px-8 bg-white text-3xl text-[#002175] z-30">Conventional</p>
+        </div>
+        <Swiper
+          spaceBetween={40}
+          loop={true}
+          className="w-full h-full !px-10 !py-12 !flex !items-center"
+          breakpoints={{
+            320: {
+              slidesPerView: 1, // 1 product for mobile
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2, // 2 products for tablets
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4, // 4 products for desktops
+              spaceBetween: 40,
+            },
+          }}
+        >
+          {ProductsDataConventional.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="px-6 py-8  flex flex-col gap-4 rounded-3xl bg-[#002175]">
+              <div className="px-6 py-8 flex flex-col gap-4 rounded-3xl bg-[#002175]">
                 <p className="uppercase text-xl font-semibold text-teal-500">{item.status}</p>
                 <h2 className="text-3xl font-semibold text-wrap text-white">{item.title}</h2>
                 <p className="text-sm font-semibold text-white">{item.description}</p>
-
               </div>
             </SwiperSlide>
-          ))
-        }
-       </Swiper>
-          <div className="flex w-full relative items-center justify-center">
-            <div className="w-full absolute h-[2px] z-20 bg-[#002175]"/>
-            <p className="px-8 bg-white text-3xl text-[#002175] z-30">Takaful</p>
-          </div>
-          <Swiper 
+          ))}
+        </Swiper>
+  
+        {/* Takaful Section */}
+        <div className="flex w-full relative items-center justify-center">
+          <div className="w-full absolute h-[2px] z-20 bg-[#002175]" />
+          <p className="px-8 bg-white text-3xl text-[#002175] z-30">Takaful</p>
+        </div>
+        <Swiper
           loop={true}
-        spaceBetween={40}
-        slidesPerView={4}  
-        className="w-full h-full !px-10 !py-12 !flex !items-center"
-       >
-        {
-          ProductsDataConventional.map((item)=>(
+          spaceBetween={40}
+          className="w-full h-full !px-10 !py-12 !flex !items-center"
+          breakpoints={{
+            320: {
+              slidesPerView: 1, // 1 product for mobile
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2, // 2 products for tablets
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4, // 4 products for desktops
+              spaceBetween: 40,
+            },
+          }}
+        >
+          {ProductsDataConventional.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="px-6 py-8 flex flex-col gap-4 rounded-3xl bg-[#01311C]">
                 <p className="uppercase text-xl font-semibold text-teal-500">{item.status}</p>
                 <h2 className="text-3xl font-semibold text-wrap text-white">{item.title}</h2>
                 <p className="text-sm font-semibold text-white">{item.description}</p>
-
               </div>
             </SwiperSlide>
-          ))
-        }
-       </Swiper>
-
-        </div>
+          ))}
+        </Swiper>
+      </div>
       )}
     </div>
   );

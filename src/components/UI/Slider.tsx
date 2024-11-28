@@ -63,9 +63,9 @@ const Slider = () => {
       <Swiper
         spaceBetween={0}
         slidesPerView={selectedCard ? 4 : 6} // Show 6 cards in a row
-        grabCursor={true} 
-        centeredSlides={true} 
-        slideToClickedSlide={true} 
+        grabCursor={true}
+        centeredSlides={true}
+        slideToClickedSlide={true}
         loop={true}
         speed={900}
         autoplay={{
@@ -78,31 +78,25 @@ const Slider = () => {
         {demoData.map((card) => (
           <SwiperSlide
             key={card.id}
-            onMouseEnter={()=>handleCardClick(card.id)}
-            // onMouseEnter={()=>handleCardClick(card.id)}
+            onMouseEnter={() => handleCardClick(card.id)}
             onClick={() => handleCardClick(card.id)}
-            
-            className={`${selectedCard === card.id ? "!mr-32" : ""}`}
+            className={`transition-all duration-500 ease-in-out ${selectedCard === card.id ? "!mr-32" : ""}`}
           >
             <div
-              className={`bg-[#5984A0] group  rounded-[30px] relative  ${
+              className={`bg-[#5984A0] group rounded-[30px] relative transition-all duration-500 ease-in-out ${
                 selectedCard === card.id ? "w-[400px] h-[399px]" : "w-[250px] h-[350px]"
-              }  p-[1px] border`}
+              } p-[1px] border`}
             >
-              <div className="w-[60%] flex flex-col justify-between  relative h-full">
+              <div className="w-[60%] flex flex-col justify-between relative h-full">
                 {selectedCard === card.id && (
                   <React.Fragment>
                     <div className="flex z-50 pt-4 pl-3 flex-col text-[#002175] font-semibold">
                       <p className="text-sm">Video Launch</p>
-                      <p className="text-xl ">{card.date}</p>
+                      <p className="text-xl">{card.date}</p>
                     </div>
-                    <div className=" z-50 flex flex-col pb-4 pl-3">
-                      <h1 className="text-6xl font-semibold text-[#002175] text-wrap">
-                        {card.name}
-                      </h1>
-                      <h4 className="text-xl font-semibold">
-                        {card.occupation}
-                      </h4>
+                    <div className="z-50 flex flex-col pb-4 pl-3">
+                      <h1 className="text-6xl font-semibold text-[#002175] text-wrap">{card.name}</h1>
+                      <h4 className="text-xl font-semibold">{card.occupation}</h4>
                     </div>
 
                     <svg
@@ -127,7 +121,7 @@ const Slider = () => {
                 alt={card.name}
                 width={250}
                 height={400}
-                className="absolute object-left h-full w-[240px] top-0 right-[5px] z-20"
+                className="absolute object-left h-full w-[240px] top-0 right-[5px] z-20 transition-all duration-300 ease-in-out transform group-hover:scale-110"
               />
               <svg
                 className="absolute hidden group-hover:block top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[100000000]"

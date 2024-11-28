@@ -21,15 +21,15 @@ const FAQsSection = () => {
       <button className="border-4 rounded-[50px] border-black font-semibold text-xs py-2 px-12  uppercase text-black ">
         FAQs
       </button>
-      <h2 className="text-7xl font-semibold text-[#002175]">
+      <h2 className="text-5xl max-sm:text-center max-sm:mt-4 md:text-7xl font-semibold text-[#002175]">
         FAQs for Insurance Riders
       </h2>
 
-      <div className="flex flex-col px-24 py-10 w-full">
+      <div className="flex flex-col md:px-24 px-4 py-10 w-full">
       {FAQs.map((item) => (
         <Accordion
           key={item.id}
-          className="!py-3 shadow-none border-t-2 border-black"
+          className="!py-3 !shadow-none !border-b-0  !border-t-2 !border-black"
           expanded={expanded === `panel${item.id}`}
           onChange={handleChange(`panel${item.id}`)}
         >

@@ -1,11 +1,20 @@
+import { IconButton } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
 const Header = () => {
   return (
-    <div className="w-full absolute top-0 left-0 h-[90px] px-10 flex justify-between items-center">
+    <div className="w-full absolute top-0 z-[50] left-0 h-[90px] px-10 flex justify-between items-center">
       {/* Left section */}
-      <div className="flex gap-2">
+     <IconButton className="!block md:!hidden ">
+     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2H22" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M2 10H22" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M2 18H22" stroke="black" stroke-width="4" stroke-linecap="round"/>
+</svg>
+
+     </IconButton>
+      <div className=" gap-2 hidden md:flex">
         <a className="px-2 py-2 text-lg text-black" href="#intro">Intro</a>
         <a className="px-2 py-2 text-lg text-black" href="#rider">Riders</a>
         <a className="px-2 py-2 text-lg text-black" href="#faqs">FAQs</a>
@@ -19,7 +28,7 @@ const Header = () => {
       </div>
 
       {/* Right section */}
-      <div className="flex gap-4 items-center">
+      <div className=" gap-4 items-center hidden md:flex">
         <a href="#">Book Online Appointment</a>
         <button className="px-6 py-2 bg-black rounded-[50px] text-white font-semibold text-lg">Locate Us</button>
       </div>

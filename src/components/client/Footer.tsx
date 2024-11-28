@@ -14,7 +14,7 @@ const Footer = () => {
       }}
     >
       {/* Left Side */}
-      <div className="w-full md:w-1/2 flex flex-col px-8 py-10 md:px-32 md:py-16">
+      <div className="w-full md:w-1/2 max-sm:mt-auto flex flex-col px-8 py-10 md:px-32 md:py-16">
         <Image
           src={"/images/WhiteLogo.png"}
           alt="logo"
@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 flex flex-col md:flex-row py-10 px-8 md:px-16 text-white">
+      <div className="w-full md:w-1/2 flex max-sm: max-sm:items-end max-sm:justify-between py-10 px-8 md:px-16 text-white">
         {/* Links Column 1 */}
         <div className="flex flex-col text-lg gap-2 md:w-1/2">
           <h2 className="text-2xl font-semibold">Internal Links</h2>

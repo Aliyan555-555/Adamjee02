@@ -18,9 +18,9 @@ const HowToShareYourKahaniSection = () => {
       <button className="border-4 rounded-[50px] border-[#002175] font-semibold text-xs py-2 px-12  uppercase text-][#002175] ">
         How to share your kahani
       </button>
-      <div className="flex w-full items-center mt-10 gap-4 flex-col text-7xl text-[#002175]">
+      <div className="flex w-full items-center mt-10 gap-4 flex-col text-4xl max-sm:text-center md:text-7xl text-[#002175]">
         <p>Share Your Story or Snap a Moment</p>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 flex-col md:flex-row items-center">
           <p>Be Part of</p>
           <p className="bg-white px-8 py-3 font-bold rounded-[100px]">
             Kahani Suno!{" "}
@@ -78,7 +78,7 @@ const HowToShareYourKahaniSection = () => {
           Look out for <strong>Kahani Suno branding</strong> near you and become
           part of this incredible journey.
         </p>
-        <h2 className="text-5xl mt-10 text-[#002175]">
+        <h2 className="text-3xl max-sm:text-center md:text-5xl mt-10 text-[#002175]">
           Your story deserves to be heard!
         </h2>
         <button style={{boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}} className="text-[#002175] font-semibold text-xl px-8 py-3 rounded-[50px] mt-10 bg-white">
