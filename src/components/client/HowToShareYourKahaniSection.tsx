@@ -1,7 +1,7 @@
 import { hashTags } from "@/src/constants";
 import React from "react";
 
-const HowToShareYourKahaniSection = () => {
+const HowToShareYourKahaniSection = ({handleOpenPopup}) => {
   return (
     <div
     id="howTo"
@@ -81,8 +81,8 @@ const HowToShareYourKahaniSection = () => {
         <h2 className="text-3xl max-sm:text-center md:text-5xl mt-10 text-[#002175]">
           Your story deserves to be heard!
         </h2>
-        <button style={{boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}} className="text-[#002175] font-semibold text-xl px-8 py-3 rounded-[50px] mt-10 bg-white">
-          Contact us
+        <button onClick={handleOpenPopup} style={{boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}} className="text-[#002175] font-semibold text-xl px-8 py-3 rounded-[50px] mt-10 bg-white">
+        Submit queries here
         </button>
       </div>
     </div>

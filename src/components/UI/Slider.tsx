@@ -141,7 +141,7 @@ const Slider = () => {
                 alt={card.name}
                 width={250}
                 height={400}
-                className="absolute object-left h-full w-[240px] top-0 right-[5px] z-20 transition-all duration-300 ease-in-out transform group-hover:scale-110"
+                className="absolute object-left h-full w-[240px] top-0 right-[5px] z-20 transition-all duration-300 ease-in-out transform "
               />
               <svg
                 className="absolute hidden group-hover:block top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[100000000]"
