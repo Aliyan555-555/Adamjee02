@@ -80,9 +80,9 @@ const HeroSection = () => {
           className="!p-2 !text-white !rounded-full !shadow-lg"
         >
           {isPlaying ? (
-            <MdOutlinePauseCircle fontSize={iconSize} />
+             <MdOutlinePlayCircle fontSize={iconSize} /> 
           ) : (
-            <MdOutlinePlayCircle fontSize={iconSize} />
+          <MdOutlinePauseCircle fontSize={iconSize} />
           )}
         </IconButton>
         <IconButton
