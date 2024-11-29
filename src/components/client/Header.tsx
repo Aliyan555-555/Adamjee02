@@ -16,9 +16,9 @@ const Header = () => {
       {/* Left section */}
      <IconButton className="!block md:!hidden ">
      <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 2H22" stroke="black" stroke-width="4" stroke-linecap="round"/>
-<path d="M2 10H22" stroke="black" stroke-width="4" stroke-linecap="round"/>
-<path d="M2 18H22" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M2 2H22" stroke="black" strokeWidth="4" strokeLinecap="round"/>
+<path d="M2 10H22" stroke="black" strokeWidth="4" strokeLinecap="round"/>
+<path d="M2 18H22" stroke="black" strokeWidth="4" strokeLinecap="round"/>
 </svg>
 
      </IconButton>

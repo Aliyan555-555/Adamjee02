@@ -52,17 +52,15 @@ const demoData = [
 
 const Slider = () => {
   const [selectedCard, setSelectedCard] = useState<number | null>(4);
-
-  // Handle click to select a card
   const handleCardClick = (id: number) => {
-    setSelectedCard(id); // Toggle selection
+    setSelectedCard(id); 
   };
 
   return (
     <div className="w-full py-10 flex justify-center items-center mx-auto">
       <Swiper
         spaceBetween={10}
-        slidesPerView={1} // Default to 1 slide on mobile
+        slidesPerView={1} 
         grabCursor={true}
         centeredSlides={true}
         slideToClickedSlide={true}

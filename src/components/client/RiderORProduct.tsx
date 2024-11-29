@@ -40,6 +40,7 @@ const RiderORProduct = () => {
             backgroundColor: isRiderTab ? "#002175" : "#fff",
             color: isRiderTab ? "white" : "#002175",
           }}
+          key={'rider'}
           className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
         >
           Riders
@@ -59,6 +60,7 @@ const RiderORProduct = () => {
             backgroundColor: isRiderTab ? "white" : "#002175",
             color: isRiderTab ? "#002175" : "#fff",
           }}
+          key={'product'}
           className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
         >
           Products

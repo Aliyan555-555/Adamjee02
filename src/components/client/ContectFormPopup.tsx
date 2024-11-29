@@ -1,6 +1,8 @@
 import { IconButton } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 import React, { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const ContactFormPopup = ({ close }) => {
   const [formData, setFormData] = useState({
@@ -31,9 +33,9 @@ const ContactFormPopup = ({ close }) => {
   // Validate form inputs
   const validate = () => {
     // eslint-next-line prefer-const
-    let tempErrors = {fullName: "",mobileNumber: "",city: "",email: "",queries: "",};// eslint-disable-line prefer-const
+    let tempErrors = {fullName: "",mobileNumber: "",city: "",email: "",queries: "",}; // eslint-disable-line prefer-const
     // eslint-disable-line prefer-const
-    let isValid = true;// eslint-disable-line prefer-const
+    let isValid = true; // eslint-disable-line prefer-const
 
     if (!formData.fullName) {
       tempErrors.fullName = "Full Name is required";
@@ -72,23 +74,17 @@ const ContactFormPopup = ({ close }) => {
 
     if (validate()) {
       try {
-        const res = await fetch("/api/email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const res = await axios.post("/api/email", formData);
 
-        const data = await res.json();
+        const data = res.data;
         if (data.success) {
-          console.log("Email sent successfully");
+          toast.success("Email sent successfully");
           close();
         } else {
-          console.log("Email failed");
+          toast.error("Email failed");
         }
       } catch (error) {
-        console.log("Email failed",error);
+        toast.error("Email failed", error);
       }
     }
   };
@@ -96,14 +92,20 @@ const ContactFormPopup = ({ close }) => {
   return (
     <div className="fixed z-[100000] top-0 left-0 w-screen h-screen bg-[#4A619B] md:py-20 px-4 sm:px-12 md:px-32 flex items-center justify-center gap-4 md:gap-6 flex-col">
       <div className="w-full flex justify-end max-sm:mt-10 items-center">
-        <IconButton onClick={close} className="!p-3 md:!p-4 !bg-white !text-black">
+        <IconButton
+          onClick={close}
+          className="!p-3 md:!p-4 !bg-white !text-black"
+        >
           <ClearIcon fontSize="large" />
         </IconButton>
       </div>
       <h4 className="text-2xl max-sm:text-center font-semibold text-teal-400">
         Submit your information and we will get back to you soon.
       </h4>
-      <form className="flex flex-wrap w-full gap-2 sm:gap-3 md:gap-5" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-wrap w-full gap-2 sm:gap-3 md:gap-5"
+        onSubmit={handleSubmit}
+      >
         <div className="md:w-[49%] w-full">
           <input
             type="text"
