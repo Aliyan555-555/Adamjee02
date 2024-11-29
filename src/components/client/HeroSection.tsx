@@ -61,7 +61,7 @@ const HeroSection = () => {
 
   return (
     <div
-      className="relative mt-[100px] w-full h-[50vh] md:h-screen bg-cover bg-center"
+      className="relative mt-[90px] w-full h-[50vh] md:h-[89vh] bg-cover bg-center"
       style={{ backgroundImage: "url(/images/Hero.png)" }}
     >
       <video
@@ -89,7 +89,7 @@ const HeroSection = () => {
           onClick={handleMuteUnmute}
           className="p-2 !hidden md:!block rounded-full shadow-lg !text-white"
         >
-          {isMuted ? <GoUnmute fontSize={35} /> : <GoMute fontSize={35} />}
+          {isMuted ?  <GoMute fontSize={35} />:<GoUnmute fontSize={35} /> }
         </IconButton>
       </div>
     </div>

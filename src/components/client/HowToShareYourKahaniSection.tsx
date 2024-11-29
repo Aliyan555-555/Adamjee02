@@ -67,14 +67,14 @@ const HowToShareYourKahaniSection = ({handleOpenPopup}) => {
       </div>
       <div className="w-full flex flex-col text-xl items-center gap-8 text-white mt-10">
         <h2 className="text-3xl font-bold">Win Amazing Prizes!</h2>
-        <p className="">
+        <p className="max-sm:text-center ">
           The top 20 inspiring stories or creative pictures will win exciting
           prizes.
         </p>
         <h3 className="text-3xl font-bold text-[#002175] mt-10">
           Find Us Near You!
         </h3>
-        <p className="text-[#002175]">
+        <p className="text-[#002175] max-sm:text-center">
           Look out for <strong>Kahani Suno branding</strong> near you and become
           part of this incredible journey.
         </p>
