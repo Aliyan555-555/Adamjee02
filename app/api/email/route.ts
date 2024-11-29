@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
           <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px;">
-            <h2 style="color: #1e90ff;">New Contact Form Submission</h2>
+            <h2 style="color: #1e90ff;">Kahani Suno Query Form Submission</h2>
             <p style="font-size: 16px; color: #333333;"><strong>Full Name:</strong> ${fullName}</p>
             <p style="font-size: 16px; color: #333333;"><strong>Mobile Number:</strong> ${mobileNumber}</p>
             <p style="font-size: 16px; color: #333333;"><strong>City:</strong> ${city}</p>
