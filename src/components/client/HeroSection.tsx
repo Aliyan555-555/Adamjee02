@@ -61,7 +61,7 @@ const HeroSection = () => {
 
   return (
     <div
-      className="relative w-full h-[50vh] md:h-screen bg-cover bg-center"
+      className="relative mt-[100px] w-full h-[50vh] md:h-screen bg-cover bg-center"
       style={{ backgroundImage: "url(/images/Hero.png)" }}
     >
       <video

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, {useState } from "react";
 
 const Header = () => {
-  const [bg] = useState('transparent');
+  const [bg] = useState('white');
   // useEffect(()=>{
   //   window.addEventListener('scroll',()=>{
   //     setBg("white")
@@ -12,7 +12,7 @@ const Header = () => {
 
   // })
   return (
-    <div className={`w-full absolute top-0 z-[50] left-0 h-[90px] px-10 flex justify-between items-center bg-${bg}`}>
+    <div className={`w-full fixed top-0 z-[50] left-0 h-[90px] px-10 flex justify-between items-center bg-${bg}`}>
       {/* Left section */}
      <IconButton className="!block md:!hidden ">
      <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">

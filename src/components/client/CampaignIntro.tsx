@@ -17,7 +17,7 @@ const CampaignIntro = () => {
         Campaign Intro
       </button>
 
-      <div className="text-4xl sm:text-5xl md:text-7xl  font-semibold md:w-[70%] text-white mt-10 flex flex-col items-center  ">
+      <div className="text-4xl sm:text-5xl md:text-6xl  font-semibold md:w-[70%] text-white mt-10 flex flex-col items-center  ">
         <div className="flex flex-col md:flex-row max-sm:items-center  gap-4">
           <p className="text-[#002175] w-fit font-bold bg-white px-4 py-2 rounded-[50px]">
             Kahani suno{" "}
