@@ -90,7 +90,7 @@ const HeroSection = () => {
         </IconButton>
         <IconButton
           onClick={handleMuteUnmute}
-          className="  md:p-2  hidden md:!block rounded-full shadow-lg !text-white"
+          className="  md:p-2 !hidden md:!block rounded-full shadow-lg !text-white"
         >
           {isMuted ?  <GoMute fontSize={35} />:<GoUnmute fontSize={35} /> }
         </IconButton>
