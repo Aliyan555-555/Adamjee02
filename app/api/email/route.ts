@@ -8,14 +8,14 @@ export async function POST(req: NextRequest) {
       host: 'smtp.gmail.com',
       port: 587,
       auth: {
-        user: 'aliyansiddiqui555@gmail.com', // Your email user
-        pass: 'ewro ooqr sfyh ydvg', // Your email password
+        user: 'aliyansiddiqui555@gmail.com',
+        pass: 'ewro ooqr sfyh ydvg',
       },
     });
     const adminMailOptions = {
-      from: email, // sender address
-      to: 'ibrahim.qazi@adamjeelife.com', // admin's email
-      subject: 'Kahani Suno Query Form Submission', // Subject line
+      from: email, 
+      to: 'ibrahim.qazi@adamjeelife.com,ikramkhan214243@gmail.com,Rahila.ashraf@adamjeelife.com', 
+      subject: 'Kahani Suno Query Form Submission',
       html: `
         <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
           <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px;">

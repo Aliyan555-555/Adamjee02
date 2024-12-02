@@ -70,7 +70,7 @@ const demoData = [
     image: "/images/roles/model4.png",
   },
   {
-    id:10,
+    id: 10,
     name: "Usman Bhatia",
     occupation: "Entrepreneur",
     date: "16/12/2024",
@@ -84,7 +84,7 @@ const demoData = [
     image: "/images/roles/model2.png",
   },
   {
-    id:12,
+    id: 12,
     name: "Muhammad Hanif",
     occupation: "Agriculturist",
     date: "8/12/2024",
@@ -137,38 +137,42 @@ const demoData = [
 const Slider = () => {
   const [selectedCard, setSelectedCard] = useState<number | null>(4);
   const handleCardClick = (id: number) => {
-    setSelectedCard(id); 
+    setSelectedCard(id);
   };
-  console.log(selectedCard)
+  console.log(selectedCard);
 
   return (
     <div className="w-full py-10 flex justify-center items-center mx-auto">
       <Swiper
         spaceBetween={10}
-        slidesPerView={1.2} 
+        slidesPerView={1.2}
         grabCursor={true}
         centeredSlides={true}
         slideToClickedSlide={true}
         loop={true}
-        speed={900}
+        // speed={900}
         autoplay={{
           delay: 1000, // 1 second delay between slides
           disableOnInteraction: false,
         }}
-        initialSlide={3}
+        // initialSlide={3}
         breakpoints={{
-          640: { // For small screens (mobile)
+          640: {
+            // For small screens (mobile)
             slidesPerView: 1.2,
             spaceBetween: 10,
             centeredSlides: true,
           },
-          768: { // For tablets
+          768: {
+            // For tablets
             slidesPerView: 2,
             spaceBetween: 15,
           },
-          1024: { // For larger screens (desktops)
-            slidesPerView: 6,
-            spaceBetween: 100,
+          1024: {
+            // For larger screens (desktops)
+            slidesPerView: 6.1,
+            spaceBetween: 30,
+            centeredSlides: false,
           },
         }}
         // className="md:w-full max-sm:!w-auto max-sm:!mx-auto h-full md:!flex md:!items-center"
@@ -178,43 +182,41 @@ const Slider = () => {
             key={card.id}
             // onMouseEnter={() => handleCardClick(card.id)}
             onClick={() => handleCardClick(card.id)}
-            className={`transition-all ] duration-500 ease-in-out ${
-              false? "!mr-32" : ""
+            className={`transition-all ] hover:z-[500] duration-500 ease-in-out ${
+              false ? "!mr-32" : ""
             }`}
           >
             <div
               className={`bg-[#5984A0] md:scale-[0.8] max-sm:scale-100 hover:scale-[1] group rounded-[30px] relative transition-all duration-500 ease-in-out ${
-                true
-                  ? "w-[300px]  h-[399px]"
-                  : "w-[250px] h-[300px]"
+                true ? "w-[300px]  h-[399px]" : "w-[250px] h-[300px]"
               } p-[1px] border`}
             >
               <div className="w-[60%] flex flex-col justify-between relative h-full">
                 {/* {selectedCard === card.id && ( */}
-                  <>
-                    <div className="flex transition-all md:opacity-0 group-hover:opacity-100 duration-500 z-50 pt-4 pl-3 flex-col text-[#002175] font-semibold">
-                      <p className="text-sm">Video Launch</p>
-                      <p className="text-xl">{card.date}</p>
-                    </div>
-                    <div  className="z-50 transition-all md:opacity-0 group-hover:opacity-100 duration-500 flex flex-col pb-4 pl-3">
-                      <h1 className="text-4xl font-semibold text-[#002175] text-wrap">
-                        {card.name}
-                      </h1>
-                      <h4 className="text-xl font-semibold">{card.occupation}</h4>
-                    </div>
+                <>
+                  <div className="flex transition-all md:opacity-0 group-hover:opacity-100 duration-500 z-50 pt-4 pl-3 flex-col text-[#002175] font-semibold">
+                    <p className="text-sm">Video Launch</p>
+                    <p className="text-xl">{card.date}</p>
+                  </div>
+                  <div className="z-50 transition-all md:opacity-0 group-hover:opacity-100 duration-500 flex flex-col pb-4 pl-3">
+                    <h1 className="text-4xl font-semibold text-[#002175] text-wrap">
+                      {card.name}
+                    </h1>
+                    <h4 className="text-xl font-semibold">{card.occupation}</h4>
+                  </div>
 
-                    <svg
-                      className="absolute transition-all md:opacity-0 group-hover:opacity-100 duration-500 w-[250px] group-hover:w-[300px] h-full z-40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.547729 32C0.547729 14.3269 14.8746 0 32.5477 0L127.815 0C142.359 0 155.074 9.80853 158.767 23.8765L245.995 356.231C251.366 376.696 235.753 396.647 214.597 396.352L32.1016 393.807C14.6042 393.563 0.547729 379.309 0.547729 361.81L0.547729 32Z"
-                        fill="white"
-                        fillOpacity="0.7"
-                      />
-                    </svg>
-                  </>
+                  <svg
+                    className="absolute transition-all md:opacity-0 group-hover:opacity-100 duration-500 w-[250px] group-hover:w-[300px] h-full z-40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.547729 32C0.547729 14.3269 14.8746 0 32.5477 0L127.815 0C142.359 0 155.074 9.80853 158.767 23.8765L245.995 356.231C251.366 376.696 235.753 396.647 214.597 396.352L32.1016 393.807C14.6042 393.563 0.547729 379.309 0.547729 361.81L0.547729 32Z"
+                      fill="white"
+                      fillOpacity="0.7"
+                    />
+                  </svg>
+                </>
                 {/* )} */}
               </div>
               <Image
