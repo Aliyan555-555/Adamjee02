@@ -1,7 +1,5 @@
 "use client";
-// import { getInstagramFeeds } from "@/src/api";
-// import { fetchSocialMediaPosts } from '@/src/api'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from "next/script";
 import CampaignIntro from "@/src/components/client/CampaignIntro";
 import ContactFormPopup from "@/src/components/client/ContectFormPopup";
 import FAQsSection from "@/src/components/client/FAQsSection";
@@ -20,11 +18,25 @@ const Home = () => {
   const handleClosePopup = () => {
     setPopup(false);
   };
+
   return (
     <div className="w-screen !scroll-smooth overflow-x-hidden">
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-3PD6V68E4G`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+           window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3PD6V68E4G');
+
+        `}
+      </Script>
       <HeroSection />
       <CampaignIntro />
-      <GoogleAnalytics gaId='G-LKMWHH60CN'/>
       <RiderORProduct />
       <FAQsSection />
       <HowToShareYourKahaniSection handleOpenPopup={handleOpenPopup} />
