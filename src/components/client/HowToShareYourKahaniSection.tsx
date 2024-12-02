@@ -1,27 +1,26 @@
 import { hashTags } from "@/src/constants";
 import React from "react";
 
-const HowToShareYourKahaniSection = ({handleOpenPopup}) => {
+const HowToShareYourKahaniSection = ({ handleOpenPopup }) => {
   return (
     <div
-    id="howTo"
+      id="howTo"
       className="w-screen min-h-[200vh] bg-cover  flex items-center flex-col py-20 bg-no-repeat"
       style={{
-        background: " linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.0761554621848739) 24%, rgba(255,255,255,0.08175770308123254) 70%, rgba(255,255,255,1) 100%) ,url(/images/Gradient.png)",
+        background:
+          " linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.0761554621848739) 24%, rgba(255,255,255,0.08175770308123254) 70%, rgba(255,255,255,1) 100%) ,url(/images/Gradient.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-      }
-    }
-      
+      }}
     >
       <button className="border-4 rounded-[50px] border-[#002175] font-semibold text-xs py-2 px-12  uppercase text-][#002175] ">
         How to share your kahani
       </button>
       <div className="flex w-full items-center mt-10 gap-4 flex-col text-4xl max-sm:text-center md:text-7xl text-[#002175]">
-        <p>Share Your Story or Snap a Moment</p>
+        <p>Share Your Story - Be Part of</p>
         <div className="flex gap-3 flex-col md:flex-row items-center">
-          <p>Be Part of</p>
+          {/* <p></p> */}
           <p className="bg-white px-8 py-3 font-bold rounded-[100px]">
             Kahani Suno!{" "}
           </p>
@@ -30,15 +29,14 @@ const HowToShareYourKahaniSection = ({handleOpenPopup}) => {
       <div className="md:w-[50%] text-lg text-white flex flex-col gap-4 text-center py-10">
         <p>
           At Adamjee Life, your journey inspires us! Join our Kahani Suno
-          campaign and showcase how Adamjee Life has been your trusted partner
-          in securing your dreams.
+          campaign, showcase how Adamjee Life has been a trusted partner in your
+          life or simply take a snap of yourself with Kahani Suno logo.
         </p>
         <h2 className="text-3xl font-semibold mt-10">How to Participate </h2>
         <h3 className="text-xl font-semibold mt-6">1. Share Your Story:</h3>
         <ul className="">
           <li>
-            • post your personal experience with Adamjee Life on Our social
-            media platforms.
+            • Post your personal experience with Adamjee Life on our social media platforms.
           </li>
           <li> • Tell us how been there for you as your trusted partner. </li>
         </ul>
@@ -46,12 +44,11 @@ const HowToShareYourKahaniSection = ({handleOpenPopup}) => {
         <ul>
           <li> • Spot our Kahani Suno branding near you.</li>
           <li>
-            • Capture a picture with the branding and share it on your social
-            media. Don&apos;t Forget to Use These Hashtags
+            • Capture a picture with the branding and share it on your social media.
           </li>
         </ul>
 
-        <h3 className="text-4xl font-bold mt-20">
+        <h3 className="text-3xl md:text-4xl font-bold mt-20">
           Don&apos;t Forget to Use These Hashtags
         </h3>
       </div>{" "}
@@ -81,8 +78,15 @@ const HowToShareYourKahaniSection = ({handleOpenPopup}) => {
         <h2 className="text-3xl max-sm:text-center md:text-5xl mt-10 text-[#002175]">
           Your story deserves to be heard!
         </h2>
-        <button onClick={handleOpenPopup} style={{boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}} className="text-[#002175] font-semibold text-xl px-8 py-3 rounded-[50px] mt-10 bg-white">
-        Submit queries here
+        <button
+          onClick={handleOpenPopup}
+          style={{
+            boxShadow:
+              "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+          }}
+          className="text-[#002175] font-semibold text-xl px-8 py-3 rounded-[50px] mt-10 bg-white"
+        >
+          Submit queries here
         </button>
       </div>
     </div>

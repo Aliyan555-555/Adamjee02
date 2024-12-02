@@ -30,18 +30,18 @@ const RiderORProduct = () => {
           sx={{
             py: 3,
             width: 270,
-            px: 12,
+            px: 11,
             borderRadius: "100px 0 0 100px",
             border: 2,
-            borderColor: "#002175",
-            fontSize: "2rem",
+            borderColor: "#0064BF",
+            fontSize: "1.8rem",
             fontWeight: "bold",
             textTransform: "uppercase",
-            backgroundColor: isRiderTab ? "#002175" : "#fff",
-            color: isRiderTab ? "white" : "#002175",
+            backgroundColor: isRiderTab ? "#0064BF" : "#fff",
+            color: isRiderTab ? "white" : "#0064BF",
           }}
           key={'rider'}
-          className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
+          className="max-sm:!text-2xl max-sm:!px-6 max-sm:!w-[180px]"
         >
           Riders
         </Button>
@@ -53,12 +53,12 @@ const RiderORProduct = () => {
             width: 270,
             borderRadius: "0 100px 100px 0",
             border: 2,
-            borderColor: "#002175",
-            fontSize: "2rem",
+            borderColor: "#0064BF",
+            fontSize: "1.8rem",
             fontWeight: "bold",
             textTransform: "uppercase",
-            backgroundColor: isRiderTab ? "white" : "#002175",
-            color: isRiderTab ? "#002175" : "#fff",
+            backgroundColor: isRiderTab ? "white" : "#0064BF",
+            color: isRiderTab ? "#0064BF" : "#fff",
           }}
           key={'product'}
           className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
