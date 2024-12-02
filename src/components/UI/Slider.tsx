@@ -145,7 +145,7 @@ const Slider = () => {
     <div className="w-full py-10 flex justify-center items-center mx-auto">
       <Swiper
         spaceBetween={10}
-        slidesPerView={1.3} 
+        slidesPerView={1.2} 
         grabCursor={true}
         centeredSlides={true}
         slideToClickedSlide={true}
@@ -158,7 +158,7 @@ const Slider = () => {
         initialSlide={3}
         breakpoints={{
           640: { // For small screens (mobile)
-            slidesPerView: 1.3,
+            slidesPerView: 1.2,
             spaceBetween: 10,
             centeredSlides: true,
           },
