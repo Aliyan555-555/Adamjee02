@@ -20,7 +20,7 @@ const Home = () => {
     setPopup(false);
   };
   return (
-    <div className="w-screen overflow-x-hidden">
+    <div className="w-screen !scroll-smooth overflow-x-hidden">
       <HeroSection />
       <CampaignIntro />
       <RiderORProduct />

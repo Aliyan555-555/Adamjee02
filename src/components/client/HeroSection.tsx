@@ -61,6 +61,7 @@ const HeroSection = () => {
 
   return (
     <div
+    id="intro"
       className="relative mt-[90px] w-full h-[50vh] md:h-[89vh] bg-cover bg-center"
       style={{ backgroundImage: "url(/images/Hero.png)" }}
     >
@@ -74,20 +75,20 @@ const HeroSection = () => {
       />
 
       {/* Custom Controls */}
-      <div className="absolute max-sm:top-[45%] max-sm:left-[40%] md:bottom-8 md:right-8 md:px-10 flex space-x-4">
+      <div className="absolute max-sm:top-0 max-sm:left-0 max-sm:w-full max-sm:flex max-sm:items-center max-sm:h-full max-sm:justify-center  md:bottom-8 md:right-8 md:px-10 flex space-x-4">
         <IconButton
           onClick={handlePlayPause}
           className="!p-2 !text-white !rounded-full !shadow-lg"
         >
           {isPlaying ? (
-             <MdOutlinePlayCircle fontSize={iconSize} /> 
+           <MdOutlinePauseCircle fontSize={iconSize} /> 
           ) : (
-          <MdOutlinePauseCircle fontSize={iconSize} />
+           <MdOutlinePlayCircle fontSize={iconSize} /> 
           )}
         </IconButton>
         <IconButton
           onClick={handleMuteUnmute}
-          className="p-2 !hidden md:!block rounded-full shadow-lg !text-white"
+          className="max-sm:p-1 md:p-2 max-sm:absolute max-sm:right-5 max-sm:bottom-0 md:!block rounded-full shadow-lg !text-white"
         >
           {isMuted ?  <GoMute fontSize={35} />:<GoUnmute fontSize={35} /> }
         </IconButton>

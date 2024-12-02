@@ -38,13 +38,13 @@ const Footer = () => {
         </div>
 
         {/* Links Column 2 */}
-        <div className="flex flex-col text-lg gap-2 md:w-1/2 mt-8 md:mt-0">
-          <h2 className="text-2xl font-semibold">Internal Links</h2>
+        {/* <div className="flex flex-col text-lg gap-2 md:w-1/2 mt-8 md:mt-0">
+          <h2 className="text-2xl font-semibold">External Links</h2>
           <a href="#" className="hover:underline">Placeholder Link</a>
           <a href="#" className="hover:underline">Visual Link</a>
           <a href="#" className="hover:underline">Content Link</a>
           <a href="#" className="hover:underline">Finalized Link</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
