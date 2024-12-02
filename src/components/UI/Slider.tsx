@@ -55,6 +55,7 @@ const Slider = () => {
   const handleCardClick = (id: number) => {
     setSelectedCard(id); 
   };
+  console.log(selectedCard)
 
   return (
     <div className="w-full py-10 flex justify-center items-center mx-auto">
