@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 const Header = () => {
   const [bg] = useState("white");
-  const [isMobileSlider,setMobileSlider] = useState(false)
+  // const [isMobileSlider,setMobileSlider] = useState(false)
   return (
     <div
       className={`w-full fixed top-0 z-[50] left-0 h-[90px] px-6 md:px-10 flex justify-between items-center bg-${bg}`}
