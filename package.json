@@ -17,6 +17,7 @@
     "@mui/icons-material": "^6.1.8",
     "@mui/material": "^6.1.8",
     "@mui/styled-engine-sc": "^6.1.8",
+    "@next/third-parties": "^15.0.3",
     "axios": "^1.7.8",
     "blobshape": "^1.0.0",
     "body-parser": "^1.20.3",

@@ -1,6 +1,7 @@
 "use client";
 // import { getInstagramFeeds } from "@/src/api";
 // import { fetchSocialMediaPosts } from '@/src/api'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import CampaignIntro from "@/src/components/client/CampaignIntro";
 import ContactFormPopup from "@/src/components/client/ContectFormPopup";
 import FAQsSection from "@/src/components/client/FAQsSection";
@@ -23,6 +24,7 @@ const Home = () => {
     <div className="w-screen !scroll-smooth overflow-x-hidden">
       <HeroSection />
       <CampaignIntro />
+      <GoogleAnalytics gaId='G-LKMWHH60CN'/>
       <RiderORProduct />
       <FAQsSection />
       <HowToShareYourKahaniSection handleOpenPopup={handleOpenPopup} />
