@@ -59,7 +59,7 @@ const Slider = () => {
   return (
     <div className="w-full py-10 flex justify-center items-center mx-auto">
       <Swiper
-        spaceBetween={10}
+        spaceBetween={100}
         slidesPerView={1} 
         grabCursor={true}
         centeredSlides={true}
@@ -81,8 +81,8 @@ const Slider = () => {
             spaceBetween: 15,
           },
           1024: { // For larger screens (desktops)
-            slidesPerView: 4,
-            spaceBetween: 20,
+            slidesPerView: 6,
+            spaceBetween: 100,
           },
         }}
         className="w-full h-full !flex !items-center"
@@ -90,38 +90,35 @@ const Slider = () => {
         {demoData.map((card) => (
           <SwiperSlide
             key={card.id}
-            onMouseEnter={() => handleCardClick(card.id)}
+            // onMouseEnter={() => handleCardClick(card.id)}
             onClick={() => handleCardClick(card.id)}
-            className={`transition-all duration-500 ease-in-out ${
-              selectedCard === card.id ? "!mr-32" : ""
+            className={`transition-all ] duration-500 ease-in-out ${
+              false? "!mr-32" : ""
             }`}
           >
             <div
-              className={`bg-[#5984A0] group rounded-[30px] relative transition-all duration-500 ease-in-out ${
-                selectedCard === card.id
-                  ? "w-[400px] h-[399px]"
-                  : "w-[250px] h-[350px]"
+              className={`bg-[#5984A0] scale-[0.8] hover:scale-[1] group rounded-[30px] relative transition-all duration-500 ease-in-out ${
+                true
+                  ? "w-[300px]  h-[399px]"
+                  : "w-[250px] h-[300px]"
               } p-[1px] border`}
             >
               <div className="w-[60%] flex flex-col justify-between relative h-full">
-                {selectedCard === card.id && (
+                {/* {selectedCard === card.id && ( */}
                   <>
-                    <div className="flex z-50 pt-4 pl-3 flex-col text-[#002175] font-semibold">
+                    <div className="flex transition-all opacity-0 group-hover:opacity-100 duration-500 z-50 pt-4 pl-3 flex-col text-[#002175] font-semibold">
                       <p className="text-sm">Video Launch</p>
                       <p className="text-xl">{card.date}</p>
                     </div>
-                    <div className="z-50 flex flex-col pb-4 pl-3">
-                      <h1 className="text-6xl font-semibold text-[#002175] text-wrap">
+                    <div  className="z-50 transition-all opacity-0 group-hover:opacity-100 duration-500 flex flex-col pb-4 pl-3">
+                      <h1 className="text-4xl font-semibold text-[#002175] text-wrap">
                         {card.name}
                       </h1>
                       <h4 className="text-xl font-semibold">{card.occupation}</h4>
                     </div>
 
                     <svg
-                      className="absolute z-40"
-                      width="248"
-                      height="397"
-                      viewBox="0 0 248 397"
+                      className="absolute transition-all opacity-0 group-hover:opacity-100 duration-500 w-[250px] group-hover:w-[300px] h-full z-40"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -132,7 +129,7 @@ const Slider = () => {
                       />
                     </svg>
                   </>
-                )}
+                {/* )} */}
               </div>
               <Image
                 src={card.image}
