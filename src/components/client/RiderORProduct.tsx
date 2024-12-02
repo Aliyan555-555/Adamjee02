@@ -68,7 +68,7 @@ const RiderORProduct = () => {
       </div>
       {isRiderTab ? (
         <div className="w-full flex-col flex items-center">
-          <div className="w-[90%] flex items-center flex-col">
+          <div key={index} className="w-[90%] flex items-center flex-col">
             <h2 className="text-4xl max-sm:text-center md:text-6xl  text-[#002175] mt-8">
               {RiderTabsData[index].title}
             </h2>
@@ -192,8 +192,8 @@ const RiderORProduct = () => {
               },
             }}
           >
-            {ProductsDataConventional.map((item) => (
-              <SwiperSlide key={item.id}>
+            {ProductsDataConventional.map((item,i) => (
+              <SwiperSlide key={i}>
                 <div className="px-6 py-14 h-[350px]  relative flex flex-col gap-4 rounded-3xl bg-[#002175]">
                   <h2 className="text-3xl font-semibold text-wrap text-white">
                     {item.title}

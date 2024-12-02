@@ -329,7 +329,7 @@ export const ProductsDataTakeFull = [
     href: "/TP/6.pdf",
   },
   {
-    id: 5,
+    id: 7,
     title: "Barakah Plan",
     description:
       "Be it your daughter's wedding, child education or any other savings need, this plan provides you with both financial protection and savings growth in accordance with Shariah principles. With your trusted partner, Adamjee Life.",
