@@ -7,7 +7,8 @@ import Footer from "@/src/components/client/Footer";
 import HeroSection from "@/src/components/client/HeroSection";
 import HowToShareYourKahaniSection from "@/src/components/client/HowToShareYourKahaniSection";
 import RiderORProduct from "@/src/components/client/RiderORProduct";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getInstagramFeeds } from "@/src/api";
 
 const Home = () => {
   const [popup, setPopup] = useState(false);
@@ -19,8 +20,16 @@ const Home = () => {
     setPopup(false);
   };
 
+  const fetch  = async () => {
+    const res = await getInstagramFeeds('#hello');
+    console.log(res);
+  }
+  useEffect(() => {
+    fetch();
+  }, []);
+
   return (
-    <div className="w-screen !scroll-smooth overflow-x-hidden">
+    <div className="!w-[100vw] !scroll-smooth !overflow-x-hidden">
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=G-3PD6V68E4G`}
         strategy="afterInteractive"

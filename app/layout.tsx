@@ -12,7 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-screen relative overflow-x-hidden">
+      <body className="!w-screen relative !overflow-x-hidden">
         <Header />
         <ToastContainer />
         {children}
