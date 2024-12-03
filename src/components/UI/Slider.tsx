@@ -164,13 +164,11 @@ const Slider = () => {
             centeredSlides: true,
           },
           768: {
-            // For tablets
             slidesPerView: 3,
             spaceBetween: 0,
           },
           1024: {
-            // For larger screens (desktops)
-            slidesPerView: 6.18,
+            slidesPerView: 6.1,
             spaceBetween: 0,
             centeredSlides: false,
           },
@@ -189,7 +187,7 @@ const Slider = () => {
             }`}
           >
             <div
-              className={`bg-[#5984A0] md:scale-[0.8] max-sm:scale-100 hover:scale-[1] group rounded-[30px] relative transition-all duration-500 ease-in-out ${
+              className={`bg-[#5984A0] md:scale-[0.8] max-sm:scale-100 hover:scale-[1] group !rounded-[30px] relative transition-all duration-500 ease-in-out ${
                 true ? "w-[270px]  h-[350px]" : "w-[250px] h-[300px]"
               } p-[1px] border`}
             >
@@ -215,7 +213,7 @@ const Slider = () => {
                     <path
                       d="M0.547729 32C0.547729 14.3269 14.8746 0 32.5477 0L127.815 0C142.359 0 155.074 9.80853 158.767 23.8765L245.995 356.231C251.366 376.696 235.753 396.647 214.597 396.352L32.1016 393.807C14.6042 393.563 0.547729 379.309 0.547729 361.81L0.547729 32Z"
                       fill="white"
-                      fillOpacity="0.7"
+                      fillOpacity="0.6"
                     />
                   </svg>
                 </>

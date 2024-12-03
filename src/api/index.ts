@@ -2,24 +2,24 @@ import axios from 'axios';
 
 export const getInstagramFeeds = async (hashtag) => {
   const userId = '17841466318075876'; // Your Instagram Business User ID
-  const accessToken = 'IGQWRPeVlUOU9rUkpoZAWFzWUxGX3ZAmN3VxNlpjTDI2MVFXalpTNjBKZAjIzeE1Qa0wyOHJ2aGdmaGY4UXNSakFyenVjMDFmMmt0bzRmUDFlWUU4LTQxVlB0ajgwX3hqUmx2U1otTjE3T0VwUV9IeWVqNi0wUm1SY1kZD'; // Your valid access token
+  const accessToken = 'IGQWRNWW5KZAFVyZATd3Ump4U0ZAIS2hrS0NjbGNpNGdyMl9vT1k4ZA3VEaEh5eVlnYnNyYTR6cjJqblptd1lJSkhiTGtJaEdkUllsVmsxT2k5STZAfdmRJbXhDbV9kU1RUT0RoZAHdQc2lYcG5jTGNuSVZA4cDBmczdZAM2sZD'; // Your valid access token
 
   try {
     // Fetch the hashtag ID by searching for the hashtag
-    const hashtagResponse = await axios.get(`https://graph.instagram.com/ig_hashtag_search`, {
-      params: {
-        user_id: userId,
-        q: hashtag,
-        access_token: accessToken,
-      }
-    });
+    // const hashtagResponse = await axios.get(`https://graph.instagram.com/ig_hashtag_search`, {
+    //   params: {
+    //     user_id: userId,
+    //     q: hashtag,
+    //     access_token: accessToken,
+    //   }
+    // });
 
-    // Check if hashtag is found
-    if (hashtagResponse.data.data && hashtagResponse.data.data.length > 0) {
-      const hashtagId = hashtagResponse.data.data[0].id;
+    // // Check if hashtag is found
+    if (true) {
+    //   const hashtagId = hashtagResponse.data.data[0].id;
 
       // Fetch recent media related to the hashtag
-      const postsResponse = await axios.get(`https://graph.instagram.com/${hashtagId}/recent_media`, {
+      const postsResponse = await axios.get(`https://graph.instagram.com/${17841593698074073}/recent_media`, {
         params: {
           user_id: userId,
           access_token: accessToken,
