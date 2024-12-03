@@ -25,46 +25,34 @@ const RiderORProduct = () => {
   return (
     <div id="rider" className="w-screen  py-10">
       <div className="w-full flex items-center py-10 justify-center">
-        <Button
+        <button
+        style={{
+          color:isRiderTab?'#ffff':'#0064BF',
+          background:isRiderTab?'#0064Bf':'#fff'
+        }}
           onClick={() => setIsRiderTab(true)}
-          sx={{
-            py: 3,
-            width: 270,
-            px: 11,
-            borderRadius: "100px 0 0 100px",
-            border: 2,
-            borderColor: "#0064BF",
-            fontSize: "1.8rem",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            backgroundColor: isRiderTab ? "#0064BF" : "#fff",
-            color: isRiderTab ? "white" : "#0064BF",
-          }}
-          key={'rider'}
-          className="max-sm:!text-2xl max-sm:!px-6 max-sm:!w-[180px]"
+          className={`max-sm:!text-2xl py-7 px-10 w-[270px] rounded-l-[100px] bg-[${
+            isRiderTab ? "#0064BF" : "#ffff"
+          }] border-2 uppercase border-[#0064BF] text-3xl font-bold text-[${
+            isRiderTab ? "#ffff" : "#0064BF"
+          }] max-sm:!px-8 max-sm:!w-[180px]`}
         >
           Riders
-        </Button>
-        <Button
+        </button>
+        <button
+         style={{
+          color:isRiderTab?'#0064BF':'#ffff',
+          background:isRiderTab?'#fff':'#0064Bf',
+        }}
           onClick={() => setIsRiderTab(false)}
-          sx={{
-            py: 3,
-            px: 12,
-            width: 270,
-            borderRadius: "0 100px 100px 0",
-            border: 2,
-            borderColor: "#0064BF",
-            fontSize: "1.8rem",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            backgroundColor: isRiderTab ? "white" : "#0064BF",
-            color: isRiderTab ? "#0064BF" : "#fff",
-          }}
-          key={'product'}
-          className="max-sm:!text-2xl max-sm:!px-8 max-sm:!w-[180px]"
+          className={`max-sm:!text-2xl py-7 px-10 w-[270px] rounded-r-[100px] bg-[${
+            isRiderTab ? "#fff" : "#0064BF"
+          }] border-2 uppercase border-[#0064BF] text-3xl font-bold text-[${
+            isRiderTab ? "#0064BF" : "#fff"
+          }] max-sm:!px-8 max-sm:!w-[180px]`}
         >
           Products
-        </Button>
+        </button>
       </div>
       {isRiderTab ? (
         <div className="w-full flex-col flex items-center">
@@ -192,7 +180,7 @@ const RiderORProduct = () => {
               },
             }}
           >
-            {ProductsDataConventional.map((item,i) => (
+            {ProductsDataConventional.map((item, i) => (
               <SwiperSlide key={i}>
                 <div className="px-6 py-14 h-[350px]  relative flex flex-col gap-4 rounded-3xl bg-[#002175]">
                   <h2 className="text-3xl font-semibold text-wrap text-white">
