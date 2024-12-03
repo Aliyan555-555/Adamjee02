@@ -10,7 +10,7 @@ interface VideoPopupProps {
 const VideoPopup: React.FC<VideoPopupProps> = ({ open, close, VideoComponent }) => {
   return (
     <Backdrop open={open} sx={{ zIndex: 100000 }} onClick={close}>
-      <div className="w-[60vw] h-[70vh]">
+      <div className="md:w-[60vw] w-[95vw] h-[300px] md:h-[70vh]">
         {VideoComponent}
       </div>
     </Backdrop>
