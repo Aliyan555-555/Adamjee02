@@ -86,12 +86,13 @@ const Header = () => {
       {/* Right section */}
       <div className=" gap-4 items-center hidden md:flex">
         <a href="#">Book Online Appointment</a>
-        <a
-          href="https://www.adamjeelife.com/en/contact-us"
+        <Link target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.adamjeelife.com/en/contact-us"
           className="px-6 py-2 bg-black rounded-[50px] text-white font-semibold text-lg"
         >
           Locate Us
-        </a>
+        </Link>
       </div>
 
     {
@@ -101,12 +102,14 @@ const Header = () => {
           <IconButton onClick={()=>setMobileSlider(false)} className=" ">
             <RxCross2 fontSize={35} />
           </IconButton>
-          <a
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
             href="https://www.adamjeelife.com/en/contact-us"
             className="px-6 py-2 bg-black rounded-[50px] text-white font-semibold text-lg"
           >
             Locate Us
-          </a>
+          </Link>
         </div>
         <div onClick={()=>setMobileSlider(false)} className="flex flex-col ">
         <Link

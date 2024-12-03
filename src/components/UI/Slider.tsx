@@ -142,7 +142,7 @@ const Slider = () => {
   console.log(selectedCard);
 
   return (
-    <div className="w-full py-10 flex justify-center items-center mx-auto">
+    <div className="w-full py-10  flex justify-center items-center mx-auto">
       <Swiper
         spaceBetween={10}
         slidesPerView={1.2}
@@ -159,22 +159,24 @@ const Slider = () => {
         breakpoints={{
           640: {
             // For small screens (mobile)
-            slidesPerView: 1.2,
-            spaceBetween: 10,
+            slidesPerView: 2,
+            // spaceBetween: 40,
             centeredSlides: true,
           },
           768: {
             // For tablets
-            slidesPerView: 2,
-            spaceBetween: 15,
+            slidesPerView: 3,
+            spaceBetween: 0,
           },
           1024: {
             // For larger screens (desktops)
-            slidesPerView: 6.1,
-            spaceBetween: 30,
+            slidesPerView: 5.99,
+            spaceBetween: 0,
             centeredSlides: false,
           },
         }}
+        // style={{width:'95%',}}
+        className="!w-[90%] md:!w-[95%]"
         // className="md:w-full max-sm:!w-auto max-sm:!mx-auto h-full md:!flex md:!items-center"
       >
         {demoData.map((card) => (
@@ -188,7 +190,7 @@ const Slider = () => {
           >
             <div
               className={`bg-[#5984A0] md:scale-[0.8] max-sm:scale-100 hover:scale-[1] group rounded-[30px] relative transition-all duration-500 ease-in-out ${
-                true ? "w-[300px]  h-[399px]" : "w-[250px] h-[300px]"
+                true ? "w-[270px]  h-[350px]" : "w-[250px] h-[300px]"
               } p-[1px] border`}
             >
               <div className="w-[60%] flex flex-col justify-between relative h-full">

@@ -5,6 +5,7 @@ import Slider from "../UI/Slider";
 const CampaignIntro = () => {
   return (
     <div
+    id="intro"
       className="w-screen  min-h-screen bg-cover bg-center bg-no-repeat flex-col py-10 flex items-center "
       style={{
         background:

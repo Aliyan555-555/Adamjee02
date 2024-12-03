@@ -61,7 +61,7 @@ const HeroSection = () => {
 
   return (
     <div
-    id="intro"
+    
       className="relative mt-[90px] w-full h-[50vh] md:h-[89vh] bg-cover bg-center"
       style={{ backgroundImage: "url(/images/Hero.png)" }}
 
