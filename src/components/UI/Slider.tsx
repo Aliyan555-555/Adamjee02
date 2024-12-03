@@ -170,7 +170,7 @@ const Slider = () => {
           },
           1024: {
             // For larger screens (desktops)
-            slidesPerView: 5.99,
+            slidesPerView: 6.18,
             spaceBetween: 0,
             centeredSlides: false,
           },
