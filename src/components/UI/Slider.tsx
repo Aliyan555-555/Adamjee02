@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
+import VideoPopup from "./VideoPopup";
 
 // Demo data for the cards
 const demoData = [
@@ -40,6 +41,7 @@ const demoData = [
     occupation: "Social Impact Leader",
     date: "",
     image: "/images/roles/model2.png",
+    video:(<iframe style={{width:'100%',height:'100%'}} src="https://www.youtube.com/embed/qIIJuG66lh0?si=syqtjsEgZiCLz-cb" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>)
   },
   {
     id: 6,
@@ -82,6 +84,7 @@ const demoData = [
     occupation: "Social Impact Leader",
     date: "",
     image: "/images/roles/model2.png",
+    video:(<iframe style={{width:'100%',height:'100%'}} src="https://www.youtube.com/embed/qIIJuG66lh0?si=syqtjsEgZiCLz-cb" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>)
   },
   {
     id: 12,
@@ -131,13 +134,16 @@ const demoData = [
     occupation: "Agriculturist",
     date: "8/12/2024",
     image: "/images/roles/model3.png",
+    video:(<iframe style={{width:'100%',height:'100%'}} src="https://www.youtube.com/embed/qIIJuG66lh0?si=syqtjsEgZiCLz-cb" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>)
   },
 ];
 
 const Slider = () => {
+  const [video,setVideo] = useState(null);
   const [selectedCard, setSelectedCard] = useState<number | null>(4);
   const handleCardClick = (id: number) => {
     setSelectedCard(id);
+
   };
   console.log(selectedCard);
 
@@ -148,7 +154,7 @@ const Slider = () => {
         slidesPerView={1.2}
         grabCursor={true}
         centeredSlides={true}
-        slideToClickedSlide={true}
+        // slideToClickedSlide={true}
         loop={true}
         // speed={900}
         autoplay={{
@@ -181,7 +187,7 @@ const Slider = () => {
           <SwiperSlide
             key={card.id}
             // onMouseEnter={() => handleCardClick(card.id)}
-            onClick={() => handleCardClick(card.id)}
+            onClick={() =>{ handleCardClick(card.id);setVideo(card?.video?card.video:null)}}
             className={`transition-all ] hover:z-[500] duration-500 ease-in-out ${
               false ? "!mr-32" : ""
             }`}
@@ -244,6 +250,7 @@ const Slider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+    {video&&<VideoPopup  open={video?true:false} close={()=>setVideo(null)} VideoComponent={video} />}
     </div>
   );
 };
