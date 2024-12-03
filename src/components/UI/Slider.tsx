@@ -168,7 +168,7 @@ const Slider = () => {
             spaceBetween: 0,
           },
           1024: {
-            slidesPerView: 6.1,
+            slidesPerView: 6,
             spaceBetween: 0,
             centeredSlides: false,
           },
@@ -208,6 +208,7 @@ const Slider = () => {
                   <svg
                     className="absolute transition-all md:opacity-0 group-hover:opacity-100 duration-500 w-[250px] group-hover:w-[300px] h-full z-40"
                     fill="none"
+                    // viewBox="0 0 250 398 "
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
