@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getInstagramFeeds = async (hashtag) => {
   const userId = '17841466318075876'; // Your Instagram Business User ID
   const accessToken = 'IGQWRNWW5KZAFVyZATd3Ump4U0ZAIS2hrS0NjbGNpNGdyMl9vT1k4ZA3VEaEh5eVlnYnNyYTR6cjJqblptd1lJSkhiTGtJaEdkUllsVmsxT2k5STZAfdmRJbXhDbV9kU1RUT0RoZAHdQc2lYcG5jTGNuSVZA4cDBmczdZAM2sZD'; // Your valid access token
-
+console.log(hashtag)
   try {
     // Fetch the hashtag ID by searching for the hashtag
     // const hashtagResponse = await axios.get(`https://graph.instagram.com/ig_hashtag_search`, {
