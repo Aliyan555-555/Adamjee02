@@ -15,6 +15,7 @@ const demoData = [
     image: "/images/roles/model6.png",
     video: (
       <iframe
+      style={{ width: "100%", height: "100%" }}
         src="https://www.youtube.com/embed/ezS_ZD-hMj4?si=EeTMnO5lmUQvVw91"
         title="YouTube video player"
         frameBorder="0"
@@ -78,6 +79,7 @@ const demoData = [
     image: "/images/roles/model6.png",
     video: (
       <iframe
+      style={{ width: "100%", height: "100%" }}
         src="https://www.youtube.com/embed/ezS_ZD-hMj4?si=EeTMnO5lmUQvVw91"
         title="YouTube video player"
         frameBorder="0"
@@ -141,6 +143,7 @@ const demoData = [
     image: "/images/roles/model6.png",
     video: (
       <iframe
+      style={{ width: "100%", height: "100%" }}
         src="https://www.youtube.com/embed/ezS_ZD-hMj4?si=EeTMnO5lmUQvVw91"
         title="YouTube video player"
         frameBorder="0"
