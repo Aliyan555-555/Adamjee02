@@ -31,9 +31,7 @@ const RiderORProduct = () => {
           background:isRiderTab?'#0064Bf':'#fff'
         }}
           onClick={() => setIsRiderTab(true)}
-          className={`max-sm:!text-2xl py-7 px-10 w-[270px] rounded-l-[100px] bg-[${
-            isRiderTab ? "#0064BF" : "#ffff"
-          }] border-2 uppercase border-[#0064BF] text-3xl font-bold text-[${
+          className={`max-sm:!text-2xl py-7 px-10 w-[270px] rounded-l-[100px]  border-2 uppercase border-[#0064BF] text-3xl font-bold text-[${
             isRiderTab ? "#ffff" : "#0064BF"
           }] max-sm:!px-8 max-sm:!w-[180px]`}
         >
@@ -45,11 +43,7 @@ const RiderORProduct = () => {
           background:isRiderTab?'#fff':'#0064Bf',
         }}
           onClick={() => setIsRiderTab(false)}
-          className={`max-sm:!text-2xl py-7 px-10 w-[270px] rounded-r-[100px] bg-[${
-            isRiderTab ? "#fff" : "#0064BF"
-          }] border-2 uppercase border-[#0064BF] text-3xl font-bold text-[${
-            isRiderTab ? "#0064BF" : "#fff"
-          }] max-sm:!px-8 max-sm:!w-[180px]`}
+          className={`max-sm:!text-2xl py-7 px-10 w-[270px] rounded-r-[100px] border-2 uppercase border-[#0064BF] text-3xl font-bold  max-sm:!px-8 max-sm:!w-[180px]`}
         >
           Products
         </button>
