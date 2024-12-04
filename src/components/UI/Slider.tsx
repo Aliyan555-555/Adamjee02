@@ -26,6 +26,24 @@ const demoData = [
     ),
   },
   {
+    id: 5,
+    name: "Sabeen Naz",
+    occupation: "Social Impact Leader",
+    date: "",
+    image: "/images/roles/model2.png",
+    video: (
+      <iframe
+        style={{ width: "100%", height: "100%" }}
+        src="https://www.youtube.com/embed/qIIJuG66lh0?si=syqtjsEgZiCLz-cb"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    ),
+  },
+  {
     id: 2,
     name: "Waseem Aijaz",
     occupation: "Van Driver",
@@ -46,24 +64,7 @@ const demoData = [
     date: "16/12/2024",
     image: "/images/roles/model1.png",
   },
-  {
-    id: 5,
-    name: "Sabeen Naz",
-    occupation: "Social Impact Leader",
-    date: "",
-    image: "/images/roles/model2.png",
-    video: (
-      <iframe
-        style={{ width: "100%", height: "100%" }}
-        src="https://www.youtube.com/embed/qIIJuG66lh0?si=syqtjsEgZiCLz-cb"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-    ),
-  },
+  
   {
     id: 6,
     name: "Muhammad Hanif",
