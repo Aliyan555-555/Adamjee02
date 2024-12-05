@@ -8,7 +8,8 @@ import HeroSection from "@/src/components/client/HeroSection";
 import HowToShareYourKahaniSection from "@/src/components/client/HowToShareYourKahaniSection";
 import RiderORProduct from "@/src/components/client/RiderORProduct";
 import React, { useEffect, useState } from "react";
-import { getInstagramFeeds } from "@/src/api";
+import { getFeeds } from "@/src/api";
+import Page from "@/src/components/client/socialMedia";
 
 const Home = () => {
   const [popup, setPopup] = useState(false);
@@ -21,7 +22,7 @@ const Home = () => {
   };
 
   const fetch  = async () => {
-    const res = await getInstagramFeeds('#hello');
+    const res = await getFeeds('bro');
     console.log(res);
   }
   useEffect(() => {
@@ -48,9 +49,10 @@ const Home = () => {
       <CampaignIntro />
       <RiderORProduct />
       <FAQsSection />
-      <HowToShareYourKahaniSection handleOpenPopup={handleOpenPopup} />
+      <HowToShareYourKahaniSection handleOpenPopup={handleOpenPopup} /> <Page/>
       <Footer />
       {popup && <ContactFormPopup close={handleClosePopup} />}
+     
     </div>
   );
 };
