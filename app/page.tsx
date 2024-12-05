@@ -7,8 +7,8 @@ import Footer from "@/src/components/client/Footer";
 import HeroSection from "@/src/components/client/HeroSection";
 import HowToShareYourKahaniSection from "@/src/components/client/HowToShareYourKahaniSection";
 import RiderORProduct from "@/src/components/client/RiderORProduct";
-import React, { useEffect, useState } from "react";
-import { getFeeds } from "@/src/api";
+import React, { useState } from "react";
+// import { getFeeds } from "@/src/api";
 import Page from "@/src/components/client/socialMedia";
 
 const Home = () => {
@@ -21,13 +21,13 @@ const Home = () => {
     setPopup(false);
   };
 
-  const fetch  = async () => {
-    const res = await getFeeds('bro');
-    console.log(res);
-  }
-  useEffect(() => {
-    fetch();
-  }, []);
+  // const fetch  = async () => {
+  //   const res = await getFeeds('bro');
+  //   console.log(res);
+  // }
+  // useEffect(() => {
+  //   fetch();
+  // }, []);
 
   return (
     <div className="!w-[100vw] !scroll-smooth !overflow-x-hidden">
@@ -49,10 +49,9 @@ const Home = () => {
       <CampaignIntro />
       <RiderORProduct />
       <FAQsSection />
-      <HowToShareYourKahaniSection handleOpenPopup={handleOpenPopup} /> <Page/>
+      <HowToShareYourKahaniSection handleOpenPopup={handleOpenPopup} /> <Page />
       <Footer />
       {popup && <ContactFormPopup close={handleClosePopup} />}
-     
     </div>
   );
 };
