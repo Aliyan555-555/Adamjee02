@@ -7,9 +7,10 @@ import Footer from "@/src/components/client/Footer";
 import HeroSection from "@/src/components/client/HeroSection";
 import HowToShareYourKahaniSection from "@/src/components/client/HowToShareYourKahaniSection";
 import RiderORProduct from "@/src/components/client/RiderORProduct";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { getFeeds } from "@/src/api";
 import Page from "@/src/components/client/socialMedia";
+import { getFeeds } from "@/src/api";
 
 const Home = () => {
   const [popup, setPopup] = useState(false);
@@ -21,13 +22,13 @@ const Home = () => {
     setPopup(false);
   };
 
-  // const fetch  = async () => {
-  //   const res = await getFeeds('bro');
-  //   console.log(res);
-  // }
-  // useEffect(() => {
-  //   fetch();
-  // }, []);
+  const fetch  = async () => {
+    const res = await getFeeds('bro');
+    console.log(res);
+  }
+  useEffect(() => {
+    fetch();
+  }, []);
 
   return (
     <div className="!w-[100vw] !scroll-smooth !overflow-x-hidden">
