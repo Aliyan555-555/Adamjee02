@@ -15,7 +15,7 @@ const demoData = [
     image: "/images/roles/model6.png",
     video: (
       <iframe
-      style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%" }}
         src="https://www.youtube.com/embed/ezS_ZD-hMj4?si=EeTMnO5lmUQvVw91"
         title="YouTube video player"
         frameBorder="0"
@@ -49,6 +49,17 @@ const demoData = [
     occupation: "Van Driver",
     date: "20/12/2024",
     image: "/images/roles/model5.png",
+    video: (
+      <iframe
+        style={{ width: "100%", height: "100%" }}
+        src="https://www.youtube.com/embed/lSRWHcaMGtk?si=3M-1F5_RqalrnvH_"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    ),
   },
   {
     id: 3,
@@ -64,7 +75,7 @@ const demoData = [
     date: "16/12/2024",
     image: "/images/roles/model1.png",
   },
-  
+
   {
     id: 6,
     name: "Muhammad Hanif",
@@ -80,7 +91,7 @@ const demoData = [
     image: "/images/roles/model6.png",
     video: (
       <iframe
-      style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%" }}
         src="https://www.youtube.com/embed/ezS_ZD-hMj4?si=EeTMnO5lmUQvVw91"
         title="YouTube video player"
         frameBorder="0"
@@ -96,6 +107,17 @@ const demoData = [
     occupation: "Van Driver",
     date: "20/12/2024",
     image: "/images/roles/model5.png",
+    video: (
+      <iframe
+        style={{ width: "100%", height: "100%" }}
+        src="https://www.youtube.com/embed/lSRWHcaMGtk?si=3M-1F5_RqalrnvH_"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    ),
   },
   {
     id: 9,
@@ -144,7 +166,7 @@ const demoData = [
     image: "/images/roles/model6.png",
     video: (
       <iframe
-      style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%" }}
         src="https://www.youtube.com/embed/ezS_ZD-hMj4?si=EeTMnO5lmUQvVw91"
         title="YouTube video player"
         frameBorder="0"
@@ -160,6 +182,17 @@ const demoData = [
     occupation: "Van Driver",
     date: "20/12/2024",
     image: "/images/roles/model5.png",
+    video: (
+      <iframe
+        style={{ width: "100%", height: "100%" }}
+        src="https://www.youtube.com/embed/lSRWHcaMGtk?si=3M-1F5_RqalrnvH_"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    ),
   },
   {
     id: 15,
